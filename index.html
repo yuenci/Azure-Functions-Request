@@ -20,9 +20,11 @@
 
             let options = {
                 method: 'POST',
+                //method: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                credentials: "include",
                 body: JSON.stringify(update),
             };
             // get current url
