@@ -11,6 +11,7 @@
 <body>
     <h1>CORS TEST</h1>
     <button onclick="fe()">click me</button>
+    <button onclick="ge()">Get me</button>
     <p id="text"></p>
     <script>
         function fe() {
@@ -44,6 +45,12 @@
                 }).catch(e => {
                     console.log(e);
                 });
+        }
+
+        function ge() {
+            fetch('https://enjoycoding.me/response/data')
+                .then(response => response.json())
+                .then(data => console.log(data));
         }
     </script>
 </body>

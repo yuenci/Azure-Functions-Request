@@ -1,6 +1,7 @@
 from flask_cors import CORS
 from flask import Flask, request, make_response, jsonify
 from flask_cors import cross_origin
+import time
 
 
 
@@ -14,8 +15,13 @@ def postExplainToCache():
     jsonData = request.json
     sentence = jsonData["sentences"]
     print("👉"+sentence)
-    response ="[[[[[" + sentence + "]]]]]" 
+    # return current time
+    response = time.time()
     return{"response": response}
+
+@app.route('/data', methods=["GET"])
+def postExplainToCache():
+    return {"response": "Get you"}
 
 
 # @app.after_request
