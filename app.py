@@ -18,13 +18,13 @@ def postExplainToCache():
     return{"response": response}
 
 
-@app.after_request
-def after(resp):
-    resp = make_response(resp)
-    resp.headers['Access-Control-Allow-Origin'] = '*'
-    resp.headers['Access-Control-Allow-Methods'] = 'GET,POST'
-    resp.headers['Access-Control-Allow-Headers'] = 'x-requested-with,content-type'
-    return resp
+# @app.after_request
+# def after(resp):
+#     resp = make_response(resp)
+#     resp.headers['Access-Control-Allow-Origin'] = '*'
+#     resp.headers['Access-Control-Allow-Methods'] = 'GET,POST'
+#     resp.headers['Access-Control-Allow-Headers'] = 'x-requested-with,content-type'
+#     return resp
 
 
 if __name__ == '__main__':
