@@ -26,7 +26,7 @@
                 body: JSON.stringify(update),
             };
             // get current url
-            let url = "https://enjoycoding.me/api/response";
+            let url = "https://enjoycoding.me/response/data";
             fetch(url, options)
                 .then(data => {
                     if (!data.ok) {
@@ -35,7 +35,10 @@
                     return data.json();
                 }).then(update => {
                     //console.log(update);
-                    document.getElementById("text").innerHTML = update.response;
+                    // get current time
+                    let time = new Date().toLocaleTimeString() + " " + update.response;
+
+                    document.getElementById("text").innerHTML = time;
                 }).catch(e => {
                     console.log(e);
                 });
