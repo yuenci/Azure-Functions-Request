@@ -38,7 +38,7 @@
                 }).then(update => {
                     //console.log(update);
                     // get current time
-                    let time = new Date().toLocaleTimeString() + " " + update.response;
+                    let time = update.response;
 
                     document.getElementById("text").innerHTML = time;
                 }).catch(e => {

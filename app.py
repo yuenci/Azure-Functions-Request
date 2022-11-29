@@ -5,8 +5,8 @@ from flask_cors import cross_origin
 
 
 app = Flask(__name__)
-#CORS(app, resources=r'/*')
-CORS(app, resources={r"/.*": {"origins": ["http://127.0.0.1","https://yuenci.github.io/"]}}, supports_credentials=True) 
+CORS(app, resources=r'/*')
+#CORS(app, resources={r"/.*": {"origins": ["http://127.0.0.1","https://yuenci.github.io/"]}}, supports_credentials=True) 
 #CORS(app, supports_credentials=True)
 
 @app.route('/data', methods=["POST"])
