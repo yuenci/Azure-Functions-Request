@@ -20,17 +20,17 @@
             };
 
             let options = {
-                //method: 'POST',
+                method: 'POST',
                 //method: 'no-cors',
-                method: 'GET',
+               
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(update),
             };
             // get current url
-            //let url = "https://enjoycoding.me/response/data";
-            let url = "https://restapi.amap.com/v3/weather/weatherInfo?city=110101&key=4aed2caea0f89681c1804ede05dcf2de";
+            let url = "https://enjoycoding.me/response/data";
+
             fetch(url, options)
                 .then(data => {
                     if (!data.ok) {
@@ -49,7 +49,7 @@
         }
 
         function ge() {
-            fetch('https://enjoycoding.me/response/data')
+            fetch('https://restapi.amap.com/v3/weather/weatherInfo?city=110101&key=4aed2caea0f89681c1804ede05dcf2de')
                 .then(response => response.json())
                 .then(data => console.log(data));
         }
