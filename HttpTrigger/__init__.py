@@ -5,15 +5,14 @@ import requests
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
-    req_body_bytes = req.get_body()
+    url = "http://20.187.114.37:86/data"
 
-    # send a get post to the url
-    url = "http://101.43.138.40:9898/data"
-    response = requests.get(url)
+    response = requests.get(url).text
+
     logging.info(
-        'Python HTTP trigger function processed a request: response: %s', response.text)
+        'Python HTTP trigger function processed a request,response: %s', response)
 
     return func.HttpResponse(
-        f"Hello, this message from Azure : {response.text}",
+        f"Hello, this message from Azure : {response}",
         status_code=200
     )
