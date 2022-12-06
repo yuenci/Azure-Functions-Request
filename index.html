@@ -37,7 +37,7 @@
                     if (!data.ok) {
                         throw Error(data.status);
                     }
-                    return data.json();
+                    return data.text();
                 }).then(update => {
                     console.log(update);
                 }).catch(e => {
