@@ -16,12 +16,12 @@
     <script>
         function fe() {
             let update = {
-                "sentences": "print('hello world')",
+                first_name: 'Innis',
+                last_name: 'Yu',
             };
 
             let options = {
-                //method: 'POST',
-                //method: 'no-cors',
+                method: 'POST',
 
                 headers: {
                     'Content-Type': 'application/json',
@@ -30,7 +30,7 @@
             };
 
             // get current url
-            let url = "https://innisfunctest1.azurewebsites.net/api/httptrigger1";
+            let url = "https://innisfunctest2.azurewebsites.net/api/httptrigger";
 
             fetch(url, options)
                 .then(data => {
@@ -39,11 +39,7 @@
                     }
                     return data.json();
                 }).then(update => {
-                    //console.log(update);
-                    // get current time
-                    let time = update.response;
-
-                    document.getElementById("text").innerHTML = time;
+                    console.log(update);
                 }).catch(e => {
                     console.log(e);
                 });
