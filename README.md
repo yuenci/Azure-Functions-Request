@@ -124,7 +124,7 @@ import requests
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
-    url = "http://20.187.114.37:86/data"
+    url = "http://example.com"
 
     response = requests.get(url).text
 
