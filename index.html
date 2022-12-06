@@ -62,6 +62,7 @@
 
         function pe() {
             fetch('https://innisfuncproxytest.azurewebsites.net/api/httptrigger')
+                //fetch('http://localhost:7071/api/HttpTrigger')
                 .then(response => response.text())
                 .then(text => {
                     console.log(text);
