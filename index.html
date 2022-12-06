@@ -22,13 +22,13 @@
             let options = {
                 //method: 'POST',
                 //method: 'no-cors',
-               
+
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(update),
             };
-            
+
             // get current url
             let url = "https://innisfunctest1.azurewebsites.net/api/httptrigger1";
 
@@ -50,9 +50,15 @@
         }
 
         function ge() {
+            // fetch('https://innisfunctest1.azurewebsites.net/api/httptrigger1?name=innis')
+            //     .then(response => response.json())
+            //     .then(data => console.log(data));
             fetch('https://innisfunctest1.azurewebsites.net/api/httptrigger1?name=innis')
-                .then(response => response.json())
-                .then(data => console.log(data));
+                // get text from response
+                .then(response => response.text())
+                .then(text => {
+                    console.log(text);
+                });
         }
     </script>
 </body>
