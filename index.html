@@ -57,13 +57,15 @@
                     console.log(text);
                 });
 
-            function pe() {
-                fetch('https://innisfuncproxytest.azurewebsites.net/api/httptrigger')
-                    .then(response => response.text())
-                    .then(text => {
-                        console.log(text);
-                    });
-            }
+
+        }
+
+        function pe() {
+            fetch('https://innisfuncproxytest.azurewebsites.net/api/httptrigger')
+                .then(response => response.text())
+                .then(text => {
+                    console.log(text);
+                });
         }
     </script>
 </body>
