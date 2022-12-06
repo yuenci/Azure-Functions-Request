@@ -50,7 +50,7 @@
         }
 
         function ge() {
-            fetch('https://innisfunctest1.azurewebsites.net/api/httptrigger1')
+            fetch('https://innisfunctest1.azurewebsites.net/api/httptrigger1?name=innis')
                 .then(response => response.json())
                 .then(data => console.log(data));
         }
