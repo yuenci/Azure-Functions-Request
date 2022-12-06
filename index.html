@@ -20,7 +20,7 @@
             };
 
             let options = {
-                method: 'POST',
+                //method: 'POST',
                 //method: 'no-cors',
                
                 headers: {
@@ -28,8 +28,9 @@
                 },
                 body: JSON.stringify(update),
             };
+            
             // get current url
-            let url = "https://enjoycoding.me/response/data";
+            let url = "https://innisfunctest1.azurewebsites.net/api/httptrigger1";
 
             fetch(url, options)
                 .then(data => {
@@ -49,7 +50,7 @@
         }
 
         function ge() {
-            fetch('https://restapi.amap.com/v3/weather/weatherInfo?city=110101&key=4aed2caea0f89681c1804ede05dcf2de')
+            fetch('https://innisfunctest1.azurewebsites.net/api/httptrigger1')
                 .then(response => response.json())
                 .then(data => console.log(data));
         }
