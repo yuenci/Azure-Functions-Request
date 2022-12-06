@@ -12,6 +12,7 @@
     <h1>CORS TEST</h1>
     <button onclick="fe()">click me</button>
     <button onclick="ge()">Get me</button>
+    <button onclick="pe()">Proxy</button>
     <p id="text"></p>
     <script>
         function fe() {
@@ -55,7 +56,14 @@
                 .then(text => {
                     console.log(text);
                 });
-        }
+
+            function pe() {
+                fetch('https://innisfuncproxytest.azurewebsites.net/api/httptrigger')
+                    .then(response => response.text())
+                    .then(text => {
+                        console.log(text);
+                    });
+            }
     </script>
 </body>
 
